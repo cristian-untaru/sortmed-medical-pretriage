@@ -1,0 +1,530 @@
+/* ---- Auth Forms ---- */
+div[data-testid="stForm"]:has(.auth-form-heading) [data-testid="InputInstructions"] {
+    display: none !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) {
+    max-width: 460px;
+    margin: 2.5rem auto 2.5rem !important;
+    padding: 20px 24px 18px !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    border-radius: 8px !important;
+    background:
+        linear-gradient(180deg, rgba(18, 22, 31, 0.94), rgba(12, 15, 22, 0.96)) !important;
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) > div {
+    gap: 1.05rem;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) .auth-form-heading {
+    padding: 0 0 5px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    text-align: center;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) .auth-form-heading h2,
+div[data-testid="stForm"]:has(.auth-form-heading) .auth-form-heading .auth-card-title {
+    margin: 0;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--heading);
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) .auth-form-heading p {
+    max-width: 390px;
+    margin: 4px auto 10px;
+    color: var(--muted);
+    font-size: 1.07rem;
+    line-height: 1.45;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) label {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) label p {
+    color: var(--heading) !important;
+    font-size: 1.05rem !important;
+    font-weight: 600;
+    margin-bottom: 0.05rem !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) input {
+    height: 33px !important;
+    min-height: 33px;
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(148, 163, 184, 0.22) !important;
+    background: rgba(39, 41, 52, 0.9) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.035) !important;
+    font-size: 1.1rem !important;
+    line-height: 1.2 !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) input:focus {
+    border-color: rgba(248, 113, 113, 0.72) !important;
+    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.16) !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"] {
+    min-height: 33px !important;
+    align-items: center !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    outline: none !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"] > div {
+    align-items: center !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    outline: none !important;
+}
+
+/* Password input — include eye toggle inside the styled box */
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button) {
+    height: 33px !important;
+    border: 1px solid rgba(148, 163, 184, 0.22) !important;
+    background: rgba(39, 41, 52, 0.9) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.035) !important;
+    border-radius: 8px !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button) input,
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button) input:focus {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button):focus-within {
+    border-color: rgba(248, 113, 113, 0.72) !important;
+    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.16) !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button) button {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stElementContainer"]:has(div[data-testid="stFormSubmitButton"]),
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"],
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] > div {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 0.15rem !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button {
+    width: 200px !important;
+    min-height: 42px;
+    padding: 0 1.65rem !important;
+    font-size: 1.1rem !important;
+    border-radius: 8px !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stElementContainer"]:has(div[data-testid="stFormSubmitButton"] button[kind="primary"]) {
+    margin-top: 0.55rem !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"]:has(button[kind="secondary"]) {
+    margin-top: -0.1rem;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind="secondary"] {
+    min-height: 38px;
+    background: rgba(20, 26, 38, 0.72) !important;
+    border: 1px solid rgba(148, 163, 184, 0.24) !important;
+    color: var(--heading) !important;
+    box-shadow: none !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind="secondary"]:hover {
+    border-color: rgba(248, 113, 113, 0.62) !important;
+    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.14) !important;
+}
+
+div[data-testid="stMarkdown"]:has(.auth-switch-text) {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
+}
+
+.auth-switch-text {
+    width: fit-content;
+    margin: 0;
+    text-align: center;
+    font-size: 1.03rem !important;
+}
+
+/* Switch section separator inside form */
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stMarkdown"]:has(.auth-switch-text) {
+    border-top: 1px solid rgba(148, 163, 184, 0.12) !important;
+    padding-top: 1.4rem !important;
+    padding-bottom: 4px !important;
+    margin-top: 0.8rem !important;
+}
+
+/* Switch submit button (comes after .auth-switch-text) — smaller */
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stElementContainer"]:has(div[data-testid="stMarkdown"]:has(.auth-switch-text)) ~ div[data-testid="stElementContainer"] div[data-testid="stFormSubmitButton"] button {
+    min-height: 32px !important;
+    font-size: 1.03rem !important;
+}
+
+/* Forgot password — plain text link */
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stElementContainer"]:has(.auth-forgot-text) {
+    margin-top: -0.65rem !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) .auth-forgot-text {
+    text-align: right;
+    margin: 0 0 1rem 0 !important;
+    padding: 0 !important;
+    font-size: 0.88rem !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) .auth-forgot-text a {
+    color: var(--muted) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(183, 188, 196, 0.35) !important;
+    padding-bottom: 1px !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) .auth-forgot-text a:hover {
+    color: var(--heading) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* Terms agree row — checkbox on left, linked text on right */
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stHorizontalBlock"]:has(div[data-testid="stCheckbox"]) {
+    align-items: center !important;
+    gap: 0 !important;
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stHorizontalBlock"]:has(div[data-testid="stCheckbox"]) > div[data-testid="stColumn"]:first-child {
+    flex: 0 0 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    padding: 0 !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stHorizontalBlock"]:has(div[data-testid="stCheckbox"]) > div[data-testid="stColumn"]:first-child div[data-testid="stElementContainer"] {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stHorizontalBlock"]:has(div[data-testid="stCheckbox"]) > div[data-testid="stColumn"]:last-child {
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 4px !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) .auth-terms-inline {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0.88rem !important;
+    color: var(--heading) !important;
+    line-height: 1.3;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) .auth-terms-inline a {
+    color: var(--heading) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(183, 188, 196, 0.45) !important;
+    padding-bottom: 1px !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading) .auth-terms-inline a:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Full-page legal — date subtitle */
+.legal-page-updated {
+    font-size: 0.88rem !important;
+    color: var(--muted) !important;
+    margin: 0 !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) {
+    background: rgba(255, 255, 255, 0.94) !important;
+}
+
+/* Legal pages — hide heading anchor icons */
+div[data-testid="stMainBlockContainer"]:has(.legal-page-updated) h1 a,
+div[data-testid="stMainBlockContainer"]:has(.legal-page-updated) h2 a,
+div[data-testid="stMainBlockContainer"]:has(.legal-page-updated) h3 a,
+div.block-container:has(.legal-page-updated) h1 a,
+div.block-container:has(.legal-page-updated) h2 a,
+div.block-container:has(.legal-page-updated) h3 a {
+    display: none !important;
+}
+
+/* Legal pages — center the back button */
+div[data-testid="stMainBlockContainer"]:has(.legal-page-updated) div[data-testid="stButton"],
+div.block-container:has(.legal-page-updated) div[data-testid="stButton"] {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* Legal pages — horizontal padding so content doesn't touch screen edges */
+div[data-testid="stMainBlockContainer"]:has(.legal-page-updated),
+div.block-container:has(.legal-page-updated) {
+    padding-left: 300px !important;
+    padding-right: 300px !important;
+}
+
+/* Legal pages — red-bordered back button */
+div[data-testid="stMainBlockContainer"]:has(.legal-page-updated) div[data-testid="stButton"] button,
+div.block-container:has(.legal-page-updated) div[data-testid="stButton"] button {
+    border: 1.5px solid rgba(248, 113, 113, 0.65) !important;
+    box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.12) !important;
+    transition: border-color 0.18s, box-shadow 0.18s !important;
+}
+
+div[data-testid="stMainBlockContainer"]:has(.legal-page-updated) div[data-testid="stButton"] button:hover,
+div.block-container:has(.legal-page-updated) div[data-testid="stButton"] button:hover {
+    border-color: rgba(248, 113, 113, 1) !important;
+    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.28) !important;
+    background: rgba(248, 113, 113, 0.08) !important;
+}
+
+/* Delete Account — red primary button */
+div[data-testid="stForm"]:has(.auth-form-heading-danger) div[data-testid="stFormSubmitButton"] button[kind="primary"] {
+    background: linear-gradient(90deg, #dc2626, #b91c1c) !important;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.28) !important;
+    border: none !important;
+}
+
+div[data-testid="stForm"]:has(.auth-form-heading-danger) div[data-testid="stFormSubmitButton"] button[kind="primary"]:hover {
+    background: linear-gradient(90deg, #ef4444, #dc2626) !important;
+    box-shadow: 0 0 18px rgba(220, 38, 38, 0.45) !important;
+}
+
+/* Delete Account — "what gets deleted" info box */
+/* Change Password confirmation - match danger primary button */
+div[data-testid="stForm"]:has(.auth-change-password-confirm) div[data-testid="stFormSubmitButton"] button[kind="primary"] {
+    background: linear-gradient(90deg, #dc2626, #b91c1c) !important;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.28) !important;
+    border: none !important;
+}
+
+div[data-testid="stForm"]:has(.auth-change-password-confirm) div[data-testid="stFormSubmitButton"] button[kind="primary"]:hover {
+    background: linear-gradient(90deg, #ef4444, #dc2626) !important;
+    box-shadow: 0 0 18px rgba(220, 38, 38, 0.45) !important;
+}
+
+.delete-warning-list {
+    background: rgba(220, 38, 38, 0.07);
+    border: 1px solid rgba(220, 38, 38, 0.22);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 0 0 10px;
+}
+
+.delete-warning-list ul {
+    margin: 5px 0 0;
+    padding-left: 18px;
+}
+
+.delete-warning-list li {
+    margin: 3px 0;
+}
+
+@media (max-width: 640px) {
+    div[data-testid="stForm"]:has(.auth-form-heading) {
+        padding: 14px 14px 12px !important;
+    }
+
+    div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button {
+        width: 100% !important;
+    }
+}
+
+/* ---- Light mode ---- */
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) input {
+    background: var(--input-bg) !important;
+    color: var(--input-text) !important;
+    border-color: var(--input-border) !important;
+    box-shadow: var(--input-shadow) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button) {
+    background: var(--input-bg) !important;
+    border-color: var(--input-border) !important;
+    box-shadow: var(--input-shadow) !important;
+}
+
+/* Primary button (Continue, Update password) — indigo gradient in light mode, only Change Password form */
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading):not(:has(.auth-form-heading-danger)) div[data-testid="stFormSubmitButton"] button[kind="primary"],
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading):not(:has(.auth-form-heading-danger)) div[data-testid="stButton"] button[kind="primary"] {
+    background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%) !important;
+    border: none !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.30) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading):not(:has(.auth-form-heading-danger)) div[data-testid="stFormSubmitButton"] button[kind="primary"] p,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading):not(:has(.auth-form-heading-danger)) div[data-testid="stFormSubmitButton"] button[kind="primary"] span,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading):not(:has(.auth-form-heading-danger)) div[data-testid="stFormSubmitButton"] button[kind="primary"] div {
+    color: #ffffff !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading):not(:has(.auth-form-heading-danger)) div[data-testid="stFormSubmitButton"] button[kind="primary"]:hover,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading):not(:has(.auth-form-heading-danger)) div[data-testid="stButton"] button[kind="primary"]:hover {
+    box-shadow: 0 8px 26px rgba(79, 70, 229, 0.50) !important;
+    transform: translateY(-1px) !important;
+    filter: brightness(1.08) !important;
+}
+
+/* Secondary buttons (Back, Cancel) — solid white, clearly readable in light mode */
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind="secondary"],
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button[kind="secondary"] {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.22) !important;
+    color: #1f2328 !important;
+    box-shadow: none !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind="secondary"] p,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind="secondary"] span,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind="secondary"] div,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button[kind="secondary"] p,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button[kind="secondary"] span,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button[kind="secondary"] div {
+    color: #1f2328 !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind="secondary"]:hover,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button[kind="secondary"]:hover {
+    background: #f2f2f4 !important;
+    background-color: #f2f2f4 !important;
+    border-color: rgba(0, 0, 0, 0.32) !important;
+    box-shadow: none !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) .auth-forgot-text a:hover {
+    border-bottom-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) .auth-terms-inline a:hover {
+    border-bottom-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Legal pages: Back button — text must be dark on the near-transparent background */
+:root[data-theme="light"] div[data-testid="stMainBlockContainer"]:has(.legal-page-updated) div[data-testid="stButton"] button {
+    color: var(--heading) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stMainBlockContainer"]:has(.legal-page-updated) div[data-testid="stButton"] button p,
+:root[data-theme="light"] div[data-testid="stMainBlockContainer"]:has(.legal-page-updated) div[data-testid="stButton"] button span {
+    color: var(--heading) !important;
+}
+
+/* Account/auth form buttons - stronger contrast in light mode */
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button:not([kind*="primary" i]),
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button:not([kind*="primary" i]) {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(15, 23, 42, 0.28) !important;
+    color: #111827 !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button:not([kind*="primary" i]) p,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button:not([kind*="primary" i]) span,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button:not([kind*="primary" i]) div,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button:not([kind*="primary" i]) p,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button:not([kind*="primary" i]) span,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button:not([kind*="primary" i]) div {
+    color: #111827 !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button:not([kind*="primary" i]):hover,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button:not([kind*="primary" i]):hover {
+    background: #f8fafc !important;
+    background-color: #f8fafc !important;
+    border-color: rgba(15, 23, 42, 0.42) !important;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind*="primary" i],
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button[kind*="primary" i] {
+    background: linear-gradient(90deg, #ff4b4b, #c13ca6) !important;
+    border: none !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 24px rgba(255, 75, 75, 0.22) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind*="primary" i] p,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind*="primary" i] span,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button[kind*="primary" i] div,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button[kind*="primary" i] p,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button[kind*="primary" i] span,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stButton"] button[kind*="primary" i] div {
+    color: #ffffff !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading-danger) div[data-testid="stFormSubmitButton"] button[kind*="primary" i] {
+    background: linear-gradient(90deg, #ef4444, #dc2626) !important;
+    box-shadow: 0 10px 24px rgba(220, 38, 38, 0.22) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading-danger) div[data-testid="stFormSubmitButton"] button[kind*="primary" i]:hover {
+    background: linear-gradient(90deg, #f04444, #c81e1e) !important;
+    box-shadow: 0 10px 22px rgba(220, 38, 38, 0.28) !important;
+    filter: brightness(1.02) !important;
+    transform: none !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-change-password-confirm) div[data-testid="stFormSubmitButton"] button[kind*="primary" i] {
+    background: linear-gradient(90deg, #ef4444, #dc2626) !important;
+    box-shadow: 0 10px 24px rgba(220, 38, 38, 0.22) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-change-password-confirm) div[data-testid="stFormSubmitButton"] button[kind*="primary" i]:hover {
+    background: linear-gradient(90deg, #f04444, #c81e1e) !important;
+    box-shadow: 0 10px 22px rgba(220, 38, 38, 0.28) !important;
+    filter: brightness(1.02) !important;
+    transform: none !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading):not(:has(.auth-form-heading-danger)) div[data-testid="stFormSubmitButton"] button[kind*="primary" i]:hover,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading):not(:has(.auth-form-heading-danger)) div[data-testid="stButton"] button[kind*="primary" i]:hover {
+    box-shadow: 0 10px 22px rgba(255, 75, 75, 0.28) !important;
+    filter: brightness(1.02) !important;
+    transform: none !important;
+}
+
+/* Password visibility icon - black in light mode */
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button) button,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button) button * {
+    color: #111827 !important;
+    opacity: 1 !important;
+}
+
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button) button svg,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button) button svg *,
+:root[data-theme="light"] div[data-testid="stForm"]:has(.auth-form-heading) div[data-baseweb="input"]:has(button) button path {
+    color: #111827 !important;
+    fill: #111827 !important;
+    stroke: #111827 !important;
+    opacity: 1 !important;
+}

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.agents/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Local app database
+app_data/*.db
+app_data/*.db-journal
+app_data/*.sqlite
+app_data/*.sqlite3
+app_data/*.json
+
+# MedQuAD retrieval artifacts are loaded from Hugging Face Hub.
+data/medquad_retrieval.csv
+data/medquad_embeddings_minilm.npy
+data/medquad_embeddings_minilm_meta.json
+
+# IDE
+.vscode/
+
+# Streamlit logs
+*.log
+
+# Streamlit secrets (contain credentials - never commit)
+.streamlit/secrets.toml

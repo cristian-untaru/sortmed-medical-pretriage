@@ -1,0 +1,205 @@
+/* ---- Selectbox — hide caret, show pointer cursor ---- */
+div[data-testid="stSelectbox"] input[role="combobox"],
+div[data-baseweb="select"] input[role="combobox"] {
+    opacity: 0 !important;
+    caret-color: transparent !important;
+}
+
+div[data-testid="stSelectbox"] div[data-baseweb="select"],
+div[data-testid="stSelectbox"] div[data-baseweb="select"] > div,
+div[data-baseweb="option"],
+li[role="option"] {
+    cursor: pointer !important;
+}
+
+/* ---- Main Page: Active Model Badge ---- */
+.active-model-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 0.75rem;
+    background: rgba(15, 23, 42, 0.35);
+    color: rgba(226, 232, 240, 0.78);
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+.active-model-label {
+    color: rgba(226, 232, 240, 0.58);
+    font-weight: 500;
+}
+
+.active-model-name {
+    color: rgba(226, 232, 240, 0.88);
+    font-weight: 600;
+}
+
+/* ---- Disclaimer block ---- */
+.disclaimer-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.13);
+    background: rgba(148, 163, 184, 0.05);
+    border-radius: 8px;
+    margin: 0.5rem 0 1.25rem;
+}
+
+.disclaimer-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--text);
+    margin-top: 2px;
+}
+
+.disclaimer-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.disclaimer-text strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+:root[data-theme="light"] .disclaimer-block {
+    border-color: rgba(0, 0, 0, 0.09);
+    background: rgba(0, 0, 0, 0.03);
+}
+
+:root[data-theme="light"] .disclaimer-icon {
+    color: var(--heading);
+}
+
+:root[data-theme="light"] .disclaimer-text {
+    color: var(--muted);
+}
+
+:root[data-theme="light"] .disclaimer-text strong {
+    color: var(--text);
+}
+
+.active-model-separator {
+    color: rgba(148, 163, 184, 0.45);
+}
+
+.active-model-link {
+    color: rgba(226, 232, 240, 0.78) !important;
+    text-decoration: none !important;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.active-model-link:hover {
+    color: rgba(226, 232, 240, 0.95) !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(226, 232, 240, 0.55);
+}
+
+/* ---- Light mode: Active Model Badge ---- */
+:root[data-theme="light"] .active-model-box {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--text);
+}
+
+:root[data-theme="light"] .active-model-label {
+    color: var(--muted);
+}
+
+:root[data-theme="light"] .active-model-name {
+    color: var(--heading);
+}
+
+:root[data-theme="light"] .active-model-separator {
+    color: rgba(71, 85, 105, 0.45);
+}
+
+:root[data-theme="light"] .active-model-link {
+    color: var(--text) !important;
+}
+
+:root[data-theme="light"] .active-model-link:hover {
+    color: var(--heading) !important;
+    text-decoration-color: rgba(71, 85, 105, 0.55);
+}
+
+/* ---- Analyze button accent ---- */
+.analyze-button-anchor {
+    display: none !important;
+}
+
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) {
+    min-height: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"],
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:focus,
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:focus-visible,
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:active,
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:disabled,
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"][disabled] {
+    background: linear-gradient(90deg, #0066ff 0%, #8f00ff 100%) !important;
+    border: 0 !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(143, 0, 255, 0.34) !important;
+}
+
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:hover {
+    box-shadow: 0 10px 30px rgba(143, 0, 255, 0.48) !important;
+}
+
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"] p,
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"] span {
+    color: #ffffff !important;
+}
+
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:disabled,
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"][disabled] {
+    opacity: 0.82 !important;
+    cursor: not-allowed !important;
+    filter: saturate(0.9) !important;
+    transform: none !important;
+}
+
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:disabled:hover,
+div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"][disabled]:hover {
+    box-shadow: 0 8px 24px rgba(143, 0, 255, 0.34) !important;
+    transform: none !important;
+}
+
+/* ---- Light mode: Analyze button uses orange-purple gradient ---- */
+:root[data-theme="light"] div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"],
+:root[data-theme="light"] div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:focus,
+:root[data-theme="light"] div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:focus-visible,
+:root[data-theme="light"] div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:active,
+:root[data-theme="light"] div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:disabled,
+:root[data-theme="light"] div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"][disabled] {
+    background: linear-gradient(90deg, #e96443 0%, #904e95 100%) !important;
+    border: 0 !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(233, 100, 67, 0.28) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:hover {
+    box-shadow: 0 10px 30px rgba(233, 100, 67, 0.42) !important;
+}
+
+:root[data-theme="light"] div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"]:disabled:hover,
+:root[data-theme="light"] div[data-testid="stElementContainer"]:has(.analyze-button-anchor) + div[data-testid="stElementContainer"] div[data-testid="stButton"] > button[kind="primary"][disabled]:hover {
+    box-shadow: 0 8px 24px rgba(233, 100, 67, 0.28) !important;
+    transform: none !important;
+}

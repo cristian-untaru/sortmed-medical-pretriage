@@ -1,0 +1,622 @@
+/* =======================================================================
+   responsive.css  .  SortMed  .  Design responsive profesionist
+   Desktop-first. Nu modifica baseline-ul de ~1269px.
+   Incarcat ultimul in toate bundle-urile -- suprascrie tot ce e inainte.
+   ======================================================================= */
+
+/* -----------------------------------------------------------------------
+   min-width: 2000px  .  Ecrane foarte mari
+   ----------------------------------------------------------------------- */
+@media (min-width: 2000px) {
+    div[data-testid="stMainBlockContainer"],
+    div.block-container {
+        max-width: 1700px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .lp-section-inner,
+    .lp-hero-inner { max-width: 1320px; }
+
+    .lp-header-inner { max-width: 1600px; }
+
+    .about-page { max-width: 1120px; margin: 0 auto; }
+
+    .brand-logo { height: 54px; }
+}
+
+/* -----------------------------------------------------------------------
+   max-width: 1200px  .  Laptopuri mici
+   ----------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    /* Legal pages: reduce din 300px hardcodat in auth.css */
+    div[data-testid="stMainBlockContainer"]:has(.legal-page-updated),
+    div.block-container:has(.legal-page-updated) {
+        padding-left: 140px !important;
+        padding-right: 140px !important;
+    }
+
+    .brand-logo { height: 42px; }
+
+    .about-hero-title { font-size: 2.4rem !important; }
+
+    .lp-page .lp-eyebrow { font-size: 2.4rem !important; }
+}
+
+/* -----------------------------------------------------------------------
+   max-width: 992px  .  Tablet landscape
+   ----------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    /* ---- Container Streamlit ---- */
+    div[data-testid="stMainBlockContainer"],
+    div.block-container {
+        padding-left: 1.75rem !important;
+        padding-right: 1.75rem !important;
+    }
+
+    div[data-testid="stMainBlockContainer"]:has(.legal-page-updated),
+    div.block-container:has(.legal-page-updated) {
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+    }
+
+    /* ---- Navbar ---- */
+    .brand-logo { height: 38px; max-width: 155px; }
+    .navbar { padding: 9px 14px; }
+    .navbar a { font-size: 15px; }
+    .navbar-right { gap: 12px; }
+    .navbar-right > a { font-size: 15px; padding: 5px 10px; }
+    .user-menu-trigger { font-size: 18px; }
+    .user-menu-dropdown { right: 0; max-width: calc(100vw - 2rem); }
+
+    /* ---- Landing page ---- */
+    .lp-hero-headline { font-size: 2.5rem; }
+
+    /* Sageata "How it works" centrata cand steps sunt in coloana */
+    .lp-step-arrow { align-self: center; margin: 0 auto 20px auto; }
+
+    /* ---- About page ---- */
+    .about-hero-title { font-size: 2.1rem !important; }
+
+    /* Rec-grid: 3 col -> 2 col; al 3-lea card centrat singur pe rand */
+    .about-rec-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .about-rec-grid > :last-child:nth-child(2n+1) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(50% - 6px);
+    }
+
+    /* about-info-grid ramane la 2 col (original) la tablet landscape */
+
+    /* ---- Account: stats 4 col -> 2 col ---- */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    /* stats-grid-3 ramane la 3 col la tablet landscape (e corect) */
+
+    /* ---- Auth forms ---- */
+    /* Ascunde coloanele spacer; auth_col ramane si se extinde la 100% */
+    div[data-testid="stHorizontalBlock"]:has(div[data-testid="stForm"]:has(.auth-form-heading)) > div[data-testid="stColumn"]:first-child,
+    div[data-testid="stHorizontalBlock"]:has(div[data-testid="stForm"]:has(.auth-form-heading)) > div[data-testid="stColumn"]:last-child {
+        display: none !important;
+    }
+
+    div[data-testid="stForm"]:has(.auth-form-heading) {
+        max-width: 460px;
+        margin: 2rem auto !important;
+    }
+
+    /* Butoane auth (≤992px): max-width ca sa nu depaseasca cardul */
+    div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button {
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    div[data-testid="stVerticalBlock"]:has(div[data-testid="stForm"]:has(.auth-form-heading)) div[data-testid="stButton"] > button {
+        width: min(100%, 220px) !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Terms row: checkbox + text pe acelasi rand */
+    div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stHorizontalBlock"]:has(div[data-testid="stCheckbox"]) {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+    }
+}
+
+/* -----------------------------------------------------------------------
+   max-width: 768px  .  Tablet portrait / mobile layout
+   ----------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    /* ---- Container Streamlit ---- */
+    div[data-testid="stMainBlockContainer"],
+    div.block-container {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    div[data-testid="stMainBlockContainer"]:has(.legal-page-updated),
+    div.block-container:has(.legal-page-updated) {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    /* ---- Navbar ---- */
+    .brand-logo { height: 34px; max-width: 140px; }
+
+    /* Meniu hamburger deschis: iteme centrate */
+    .navbar-right { align-items: center; }
+
+    /* Dropdown centrat si in viewport */
+    .user-menu-dropdown {
+        right: 50%;
+        transform: translateX(50%);
+        left: auto;
+        min-width: 200px;
+        max-width: calc(100vw - 2rem);
+    }
+
+    /* Trigger username: in hamburger menu e vertical-stacked, nu mai e nevoie de max-width */
+    .user-menu-trigger {
+        max-width: none !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+
+    /* Touch target pentru linkuri navbar */
+    .navbar-right > a {
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* ---- Landing page ---- */
+    .lp-header-inner { height: 54px; }
+
+    .lp-nav-login {
+        font-size: 0.82rem;
+        padding: 8px 12px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .lp-nav-cta {
+        font-size: 0.82rem;
+        padding: 8px 14px;
+        min-height: 40px;
+    }
+
+    .lp-footer-cta h2 { font-size: 3rem; }
+
+    .lp-section { padding: 36px 0; }
+
+    /* ---- Landing: card padding usor redus la tablet portrait ---- */
+    .lp-feature-card { padding: 18px; }
+    .lp-responsible-item { padding: 16px 15px; }
+
+    /* ---- About page ---- */
+    .about-hero-title { font-size: 1.85rem !important; }
+
+    /* Rec-grid: ramane la 2 col pe tablet portrait -- spatiu suficient */
+
+    /* Info-grid: ramane la 2 col pe tablet portrait (spatiu suficient) */
+    .about-info-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .about-section-title { font-size: 1.15rem !important; }
+
+    .about-steps { gap: 8px; }
+
+    .about-section { margin-bottom: 2rem; }
+
+    /* ---- Account ---- */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .stats-grid-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    /* Al 3-lea stat card: dimensiune identica cu celelalte, in col 1 */
+    .stats-grid-3 > :last-child:nth-child(2n+1) {
+        grid-column: unset;
+        justify-self: stretch;
+        max-width: none;
+    }
+
+    .account-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 14px;
+    }
+
+    /* ---- Results ---- */
+    .res-empty-state { padding: 2.5rem 1.25rem; }
+
+    /* ---- Auth forms ---- */
+    /* Spacer columns ascunse; formular centrat cu max 460px */
+    div[data-testid="stHorizontalBlock"]:has(div[data-testid="stForm"]:has(.auth-form-heading)) > div[data-testid="stColumn"]:first-child,
+    div[data-testid="stHorizontalBlock"]:has(div[data-testid="stForm"]:has(.auth-form-heading)) > div[data-testid="stColumn"]:last-child {
+        display: none !important;
+    }
+
+    div[data-testid="stForm"]:has(.auth-form-heading) {
+        width: calc(100% - 2rem) !important;
+        max-width: 460px !important;
+        margin: 3.5rem auto 1.5rem !important;
+    }
+
+    /* Terms row: checkbox + text raman pe acelasi rand (nu stacking) */
+    div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stHorizontalBlock"]:has(div[data-testid="stCheckbox"]) {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+    }
+
+    /* ---- Touch targets: butoane >= 44px ---- */
+    div.stButton > button,
+    div[data-testid="stFormSubmitButton"] button {
+        min-height: 44px !important;
+    }
+
+    div[data-testid="stButton"] button[kind="secondary"] {
+        min-width: 140px !important;
+        min-height: 44px !important;
+    }
+
+    /* Butoane auth (≤768px): latime proportionala — nu full-width, nu depasesc cardul */
+    div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button {
+        width: min(100%, 220px) !important;
+        min-height: 44px !important;
+        min-width: 0 !important;
+    }
+
+    /* stButton din coloana auth (ex: Continue as a Guest) */
+    div[data-testid="stVerticalBlock"]:has(div[data-testid="stForm"]:has(.auth-form-heading)) div[data-testid="stButton"] > button {
+        width: min(100%, 220px) !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* -----------------------------------------------------------------------
+   min-width: 641px and max-width: 998px  .  Tablet (portrait + landscape)
+   Interval dedicat paginilor de auth intre 641px si 998px.
+   Vine dupa toate blocurile max-width, deci le suprascrie la aceste dimensiuni.
+   Nu afecteaza desktopul (>998px) si nici mobilul (<641px).
+   ----------------------------------------------------------------------- */
+@media (min-width: 641px) and (max-width: 998px) {
+    /* Ascunde spacer columns — critice la 993-998px unde ≤992px nu se aplica */
+    div[data-testid="stHorizontalBlock"]:has(div[data-testid="stForm"]:has(.auth-form-heading)) > div[data-testid="stColumn"]:first-child,
+    div[data-testid="stHorizontalBlock"]:has(div[data-testid="stForm"]:has(.auth-form-heading)) > div[data-testid="stColumn"]:last-child {
+        display: none !important;
+    }
+
+    /* Formular: centrat, latime controlata, pozitionat natural */
+    div[data-testid="stForm"]:has(.auth-form-heading) {
+        width: min(100%, 440px) !important;
+        max-width: 440px !important;
+        margin: 2.5rem auto !important;
+        padding: 20px 24px 18px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Butoane form submit: centrate, latime proportionala, touch target 44px */
+    div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stFormSubmitButton"] button {
+        width: min(100%, 220px) !important;
+        min-height: 44px !important;
+        min-width: 0 !important;
+    }
+
+    /* stButton din coloana auth (ex: Continue as a Guest) */
+    div[data-testid="stVerticalBlock"]:has(div[data-testid="stForm"]:has(.auth-form-heading)) div[data-testid="stButton"] > button {
+        width: min(100%, 220px) !important;
+        min-height: 44px !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Terms row: checkbox si text pe acelasi rand, aliniate */
+    div[data-testid="stForm"]:has(.auth-form-heading) div[data-testid="stHorizontalBlock"]:has(div[data-testid="stCheckbox"]) {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: flex-start !important;
+    }
+}
+
+/* -----------------------------------------------------------------------
+   max-width: 576px  .  Telefoane
+   ----------------------------------------------------------------------- */
+@media (max-width: 576px) {
+    /* ---- Container Streamlit ---- */
+    div[data-testid="stMainBlockContainer"],
+    div.block-container {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+
+    /* ---- Navbar ---- */
+    .brand-logo { height: 30px; max-width: 130px; }
+
+    .user-menu-trigger {
+        font-size: 0.93rem;
+        padding: 6px 11px 6px 13px;
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .user-menu-dropdown { min-width: 180px; max-width: calc(100vw - 1rem); }
+
+    /* ---- Landing page ---- */
+    .lp-hero-headline { font-size: clamp(1.6rem, 7.5vw, 2.3rem); }
+
+    .lp-hero-sub { font-size: 0.95rem; }
+
+    .lp-footer-cta h2 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+
+    .lp-btn-lg { padding: 11px 22px; font-size: 0.92rem; min-height: 44px; }
+
+    .lp-section { padding: 28px 0; }
+
+    .lp-section-title { font-size: 1.6rem; }
+
+    /* Landing grids: 2 col pe telefon (suprascrie 1fr din landing.css @600px) */
+    .lp-features-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    /* Ultimul feature card impar centrat */
+    .lp-features-grid > :last-child:nth-child(2n+1) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(50% - 5px);
+    }
+
+    .lp-responsible-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    /* Ultimul responsible card impar centrat */
+    .lp-responsible-grid > :last-child:nth-child(2n+1) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(50% - 5px);
+    }
+
+    /* ---- About page ---- */
+    .about-hero-title { font-size: 2rem !important; }
+
+    .about-hero { padding: 1rem 0.75rem 2rem; }
+
+    .about-hero-cards { grid-template-columns: 1fr; gap: 10px; }
+
+    /* Rec-grid: 1 col pe telefon (collapse din 2 col al tablet-ului) */
+    .about-rec-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        gap: 10px !important;
+    }
+
+    /* Anuleaza centrarea last-child pentru layout 1-col */
+    .about-rec-grid > :last-child:nth-child(2n+1) {
+        grid-column: unset !important;
+        justify-self: unset !important;
+        max-width: none !important;
+    }
+
+    /* Landing cards: padding redus la 2 col pe telefon */
+    .lp-feature-card { padding: 14px 15px; }
+    .lp-responsible-item { padding: 14px 13px; }
+
+    /* Buton primar: latime completa pe telefon */
+    div.stButton > button[kind="primary"] { width: 100% !important; }
+
+    /* Sageata "How it works" About centrata cand steps sunt in coloana */
+    .about-step-arrow { align-self: center; margin-left: 0; }
+
+    /* Feature grid: ultimul card identic cu celelalte — curge natural in grid */
+    .about-feature-grid > :last-child:nth-child(2n+1) {
+        grid-column: unset;
+        justify-self: stretch;
+        max-width: none;
+    }
+
+    /* Feature card: padding redus la 2 col ingust */
+    .about-feature-card { padding: 12px 13px; }
+
+    /* Info-grid: 2 col pe telefon (4 carduri, numar par) */
+    .about-info-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    /* Protectie: ultimul info card impar centrat (daca numarul de carduri e impar) */
+    .about-info-grid > :last-child:nth-child(2n+1) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(50% - 5px);
+    }
+
+    /* Info card: padding redus la 2 col */
+    .about-info-card { padding: 16px; }
+
+    .about-section { margin-bottom: 1.75rem; }
+
+    /* ---- Account ---- */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .stats-grid-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .stat-value { font-size: 1.3rem; }
+
+    .stat-card { padding: 16px 12px 14px; }
+
+    .account-card { padding: 16px; }
+
+    /* ---- Results ---- */
+    .res-scores {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px !important;
+    }
+
+    .res-score-value { font-size: 1.15rem; }
+
+    .res-score-label { font-size: 0.6rem; }
+
+    .res-confidence-value { font-size: 1rem; min-width: 40px; }
+
+    .result-card { padding: 12px 14px; gap: 10px; }
+
+    .res-section-card { padding: 14px 16px; }
+
+    /* ---- Auth forms: formular mai jos si mai aerisit pe telefon ---- */
+    div[data-testid="stForm"]:has(.auth-form-heading) {
+        width: calc(100% - 2rem) !important;
+        max-width: 100% !important;
+        padding: 20px 18px 18px !important;
+        margin: 4rem auto 1.5rem !important;
+    }
+
+    div[data-testid="stForm"]:has(.auth-form-heading) input { font-size: 1rem !important; }
+
+    /* ---- Active model badge ---- */
+    .active-model-box {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.6rem;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    /* ---- Touch targets ---- */
+    div.stButton > button,
+    div[data-testid="stFormSubmitButton"] button {
+        min-height: 44px !important;
+    }
+
+    div[data-testid="stButton"] button[kind="secondary"] {
+        min-width: 120px !important;
+        min-height: 44px !important;
+    }
+
+    /* ---- Footer ---- */
+    .footer-centered { font-size: 13px; }
+}
+
+/* -----------------------------------------------------------------------
+   max-width: 420px  .  Telefoane mici
+   ----------------------------------------------------------------------- */
+@media (max-width: 420px) {
+    /* ---- Container ---- */
+    div[data-testid="stMainBlockContainer"],
+    div.block-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* ---- Navbar ---- */
+    .brand-logo { height: 26px; max-width: 110px; }
+    .navbar { padding: 8px 10px; }
+
+    .user-menu-trigger {
+        font-size: 0.82rem;
+        padding: 5px 9px 5px 11px;
+        max-width: 90px;
+    }
+
+    .user-menu-dropdown { min-width: 165px; max-width: calc(100vw - 0.75rem); }
+
+    /* ---- Landing page ---- */
+    .lp-hero-headline { font-size: 1.65rem; }
+    .lp-hero-sub { font-size: 0.9rem; }
+    .lp-hero-badge { font-size: 0.66rem; }
+    .lp-footer-cta h2 { font-size: 1.8rem; }
+    .lp-features-grid { gap: 8px !important; }
+    .lp-responsible-grid { gap: 8px !important; }
+
+    /* ---- About ---- */
+    .about-hero-title { font-size: 1.75rem !important; }
+    .about-hero { padding: 0.75rem 0.5rem 1.75rem; }
+    .about-section-title { font-size: 1.05rem !important; }
+    .about-hero-badge { font-size: 0.65rem; padding: 3px 12px; }
+
+    /* Info-grid: 1 col la telefoane f. mici (text prea inghesuit la 2 col) */
+    .about-info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    /* Anuleaza centrarea last-child la layout 1-col */
+    .about-info-grid > :last-child:nth-child(2n+1) {
+        grid-column: unset;
+        justify-self: unset;
+        max-width: none;
+    }
+
+    .about-info-card { padding: 14px; }
+
+    .about-feature-card { padding: 11px 12px; }
+
+    /* Feature grid: la telefoane mici auto-fill trece la 1 col;
+       reset centering ca ultimul card sa fie full-width ca celelalte */
+    .about-feature-grid > :last-child:nth-child(2n+1) {
+        grid-column: unset !important;
+        justify-self: stretch !important;
+        max-width: none !important;
+    }
+
+    /* Landing cards: si mai compacte la telefoane foarte mici */
+    .lp-feature-card { padding: 12px 13px; }
+    .lp-responsible-item { padding: 12px; }
+
+    /* Collapsible: padding redus */
+    .res-collapsible-card > details > summary { padding: 14px 16px; }
+    .res-collapsible-card .res-details-body { padding: 12px 16px 14px; }
+
+    /* ---- Account ---- */
+    .account-card { padding: 14px 12px; }
+    .stat-card { padding: 14px 10px 12px; }
+    .stat-value { font-size: 1.2rem; }
+    .stat-label { font-size: 0.67rem; }
+
+    /* ---- Results ---- */
+    .res-confidence-value { font-size: 0.95rem; min-width: 36px; }
+    .res-section-card { padding: 12px; }
+    .res-scores { gap: 4px !important; }
+
+    /* ---- Butoane ---- */
+    div[data-testid="stButton"] button[kind="secondary"] {
+        min-width: 100px !important;
+        font-size: 0.88rem !important;
+    }
+
+    /* ---- Footer ---- */
+    .footer-centered { font-size: 11px; }
+
+    /* ---- Active model badge ---- */
+    .active-model-box { font-size: 0.72rem; padding: 0.3rem 0.5rem; }
+}

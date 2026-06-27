@@ -1,0 +1,13 @@
+streamlit==1.51.0
+transformers>=4.41.0
+torch>=2.0.0
+torchvision
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.6.1
+joblib>=1.4.2
+huggingface_hub>=0.23.0
+safetensors>=0.4.3
+bcrypt>=4.1.0
+sentence-transformers>=3.0.0
+psycopg[binary]>=3.2.0

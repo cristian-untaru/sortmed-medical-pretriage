@@ -1,0 +1,179 @@
+/* ---- Account Page ---- */
+
+div[data-testid="stMarkdownContainer"] {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.account-card {
+    background: var(--card);
+    border: 1px solid var(--navbar-border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 6px 0 16px;
+}
+
+.account-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px 28px;
+}
+
+.account-field-label {
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 3px;
+}
+
+.account-field-value {
+    font-size: 0.97rem;
+    color: var(--heading);
+    font-weight: 500;
+    word-break: break-word;
+}
+
+/* ---- Stats grid ---- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 0;
+}
+
+.stat-card {
+    background: var(--card);
+    border: 1px solid var(--navbar-border);
+    border-radius: 8px;
+    padding: 18px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.stat-card-primary {
+    border-color: rgba(143, 0, 255, 0.28);
+}
+
+:root[data-theme="light"] .stat-card-primary {
+    border-color: rgba(11, 94, 215, 0.32);
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--heading);
+    line-height: 1.2;
+}
+
+.stat-value-sm {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--heading);
+    line-height: 1.35;
+}
+
+.stat-label {
+    font-size: 0.73rem;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+}
+
+/* ---- Confidence colors ---- */
+.stat-conf-high   { color: #4ade80; }
+.stat-conf-medium { color: #facc15; }
+.stat-conf-low    { color: #f87171; }
+
+/* ---- Sections wrapper ---- */
+.stats-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 6px 0 20px;
+}
+
+.stats-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ---- Section header row (title + eye toggle) ---- */
+.stats-section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ---- Sub-section title ---- */
+.stats-section-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2;
+}
+
+/* ---- Eye toggle button ---- */
+.section-toggle {
+    display: none;
+}
+
+.section-toggle-btn {
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.45;
+    user-select: none;
+    transition: opacity 0.15s;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.section-toggle-btn:hover {
+    opacity: 0.9;
+}
+
+/* When checked: hide the cards */
+.section-toggle:checked ~ .section-content {
+    display: none;
+}
+
+/* When checked: dim the eye to show "hidden" state */
+.section-toggle:checked ~ .stats-section-header .section-toggle-btn {
+    opacity: 0.2;
+}
+
+/* ---- 3-column grid (confidence distribution) ---- */
+.stats-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .stats-grid   { grid-template-columns: repeat(2, 1fr); }
+    .stats-grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.footer-centered {
+    text-align: center;
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* ---- Light mode ---- */
+:root[data-theme="light"] .stat-conf-high   { color: #16a34a; }
+:root[data-theme="light"] .stat-conf-medium { color: #d97706; }
+:root[data-theme="light"] .stat-conf-low    { color: #dc2626; }
